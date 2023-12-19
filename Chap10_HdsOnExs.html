@@ -1,0 +1,63 @@
+<HTML>
+	<HEAD><TITLE>Elements of a Form</TITLE>
+	<SCRIPT language="JavaScript">
+	<!--
+		function checkOut() {
+			for (x=0; x<document.survey.elements.length; x++) {
+				if (document.survey.elements[x].value == "") {
+					alert("Sorry, you forgot one of the required fields. Please try again."); 
+					break;
+				}
+			}
+			return false;
+		}
+	//-->
+	</SCRIPT></HEAD>
+	<BODY bgcolor="lightyellow"><H2><I>INFONET SERVICES</I></H2>
+		<FORM NAME="survey" onSubmit="return checkOut(this.form)">
+			<INPUT Name="firstname" Size="30" Type="TEXT" MaxLength="30">
+			<B>First Name</B><BR/><BR/>
+			<INPUT Type="TEXT" Name="lastname" Size="30" /><B>Last  Name</B><BR/><BR/>
+			<INPUT Type="TEXT" Name="emailaddr" Size="30" /><B>E-mail Address</B><BR/><BR/>
+			<INPUT Type="TEXT" Name="address" Size="30" /><B>Address</B><BR/><BR/>
+			<INPUT TYPE="TEXT" NAME="city" SIZE="30" /><B>City</B><BR/><BR/>  
+			<INPUT NAME="state" SIZE="6" /><b>State</b>
+			<INPUT NAME="zip" SIZE="10" /><b>Postal Code</b>
+			<INPUT NAME="country" SIZE="15" /><b>Country</b>
+			<P><B><I>Please choose the most appropriate statement</I></B><BR/>
+			<INPUT Type="RADIO" Name="buying" Value="regular" />
+				<B>I regularly purchase items online</B><BR/>
+			<INPUT Type="RADIO" Name="buying" Value="sometimes" />
+				<B>I have on occasion purchased items online</B><BR/>
+			<INPUT Type="RADIO" Name="buying" Value="might" CHECKED />
+				<B>I have not purchased anything online, but I would consider it</B><BR/>
+			<INPUT Type="RADIO" Name="buying" Value="willnot" />
+				<B>I prefer to shop in real stores</B> 
+	 		<P><B><I>I'm interested in (choose all that apply)</I></B><BR/>
+			<INPUT TYPE="CHECKBOX" NAME="hiking" VALUE="hiking" /><B>Hiking</B><BR/>
+			<INPUT Type="CHECKBOX" Name="mbiking" Value="mbiking" />
+				<B>Mountain Biking</B><BR/>
+			<INPUT Type="CHECKBOX" Name="camping" Value="camping" />
+				<B>Camping</B><BR/>
+			<INPUT Type="CHECKBOX" NAME="rock" Value="rock" />
+				<B>Rock Climbing</B><BR/>
+			<INPUT Type="CHECKBOX" Name="4wd" Value="4wd" />
+				<B>Off-Road 4WD</B><BR/>
+			<INPUT Type="CHECKBOX" Name="ccskiing" Value="ccskiing" />
+				<B>Cross-country Skiing</B>
+			<P><B><I>I learned about this site from</I></B><BR/>
+			<SELECT NAME="referral">
+				<OPTION VALUE="print" SELECTED>Print Ads</OPTION>
+				<OPTION VALUE="visit"> In-Store Visit</OPTION>
+				<OPTION VALUE="rec"> Friend's Recommendation</OPTION>
+				<OPTION VALUE="internet"> Sources on the Internet</OPTION>
+				<OPTION VALUE="other"> Other</OPTION>
+			</SELECT> 
+			<P><H4>Comments</H4><BR/>
+			<TEXTAREA Name="comments" Cols="40" Rows="5">
+				Please type any comments here</TEXTAREA><BR/>
+			<INPUT Type="SUBMIT" Value="Submit" />
+			<INPUT Type="RESET" Value="Start Over" />
+		</FORM>
+	</BODY>
+</HTML>

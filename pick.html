@@ -1,0 +1,29 @@
+<HTML>
+	<HEAD><SCRIPT Language="JavaScript">
+	<!-- hide from the browsers
+		function display(form) {
+			doc = open(" ","output");
+			doc.document.write('<BODY Style="background-color:'+ form.bg.value +';color:'+form.fg.value+'"');
+			doc.document.write('" Link="' + form.link.value + '" ALink="'+ form.alink.value);
+			doc.document.write('" VLink="'+ form.vlink.value + '">');
+			doc.document.write("<H1>This is a Test</H1>You Have Selected These Colors<BR>");
+			doc.document.write('<A HRef="# ">This is a Test Link</A></BODY>');
+			doc.document.close();
+		}
+	// stop hiding script -->
+	</SCRIPT></HEAD>
+	<BODY><CENTER>	<SCRIPT Language="JavaScript">  
+	<!-- hide from other browsers
+		document.write('<H1>The Color Picker</H1><FORM Method=POST>');
+		document.write('Enter Colors:<BR>'); 
+		document.write('Background: <INPUT Name="bg" Type=Text Value="' + document.bgColor + '"><BR>');
+		document.write('Text: <INPUT Name="fg" Type=Text Value="' + document.fgColor + '"><BR>');
+		document.write('Link: <INPUT Name="link" Type=Text Value="' + document.linkColor + '"><BR>');   
+		document.write('Active Link: <INPUT Name="alink" Type=Text Value="' + document.alinkColor + '"><BR>');
+		document.write('Followed Link: <INPUT Name="vlink" Type=Text Value="' + document.vlinkColor + '"><BR>');
+		document.write('<INPUT onClick="display(this.form);" Type=Button Value="Test">');
+		document.write('</FORM>');
+		display(document.forms[0]);
+	// stop hiding from other browsers -->
+	</SCRIPT></CENTER></BODY>
+</HTML>

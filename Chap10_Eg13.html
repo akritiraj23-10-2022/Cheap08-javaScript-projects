@@ -1,0 +1,72 @@
+<HTML>
+	<HEAD>
+		<TITLE>Displaying A Browser’s Attributes</TITLE>
+		<SCRIPT language="JavaScript">
+		<!--
+			function displayNavigatorProperties() {
+			// to avoid "document.write" every where below
+				with(document) {
+					write("<B>appName:</B>")
+					writeln(navigator.appName + "<BR/>")
+					write("<B>appVersion:</B>")
+					writeln(navigator.appVersion + "<BR/>")
+					write("<B>appCodeName:</B>")
+					writeln(navigator.appCodeName + "<BR/>")
+					write("<B>platform:</B>")
+					writeln(navigator.platform + "<BR/>")
+					write("<B>useragent:</B>")
+					writeln(navigator.useragent + "<BR/>")
+					write("<B>language: </B>")
+					writeln(navigator.language + "<BR/>")
+					write("<B>Number of mimeTypes: </B>")
+					writeln(navigator.mimeTypes.length + "<BR/>")
+					write("<B>Number of plugins:</B>")
+					writeln(navigator.plugins.length)
+				}
+			}
+			function displayExplorerProperties() {
+				with(document) {
+					write("<B>appName:<B>")
+					writeln(navigator.appName + "<BR/>")
+					write("<B>appVersion:<B>")
+					writeln(navigator.appVersion + "<BR/>")
+					write("<B>appMinorVersion:<B>")
+					writeln(navigator.appMinorVersion + "<BR/>")
+					write("<B>appCodeName:<B>")
+					writeln(navigator.appCodeName + "<BR/>")
+					write("<B>platform:</B>")
+					writeln(navigator.platform + "<BR/>")
+					write("<B>cpuClass:</B>")
+					writeln(navigator.cpuClass + "<BR/>")
+					write("<B>useragent:</B>")
+					writeln(navigator.useragent + "<BR/>")
+					write("<B>cookieEnabled:</B>")
+					writeln(navigator.cookieEnabled + "<BR/>")
+					write("<B>browserLanguage:</B>")
+					writeln(navigator.browserLanguage + "<BR/>")
+					write("<B>userLanguage:</B>")
+					writeln(navigator.userLanguage + "<BR/>")
+					write("<B>systemLanguage:</B>")
+					writeln(navigator.systemLanguage + "<BR/>")
+					write("<B>onLine: </B>")
+					writeln(navigator.onLine + "<BR/>")
+					write("<B>Number of mimeTypes: </B>")
+					writeln(navigator.mimeTypes.length + "<BR/>")
+					write("<B>Number of plugins:</B>")
+					writeln(navigator.plugins.length)
+					write("<B>userProfile: </B>")
+					writeln(navigator.userProfile)
+				}
+			}
+			function displayBrowserProperties() {
+				if(navigator.appName=="Netscape")
+					displayNavigatorProperties()
+				else
+					if(navigator.appName=="Microsoft Internet Explorer")
+						displayExplorerProperties()
+			}
+			displayBrowserProperties()
+		//-->
+		</SCRIPT>
+	</HEAD>
+</HTML>

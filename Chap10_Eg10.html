@@ -1,0 +1,24 @@
+<HTML>
+	<HEAD>
+		<SCRIPT Language="JavaScript">
+			function makeNewWindow() {
+				var newwindow = prompt("Enter the document to go to in a format http://www.url.com", "");
+				if (!(newwindow == null || newwindow == "" )) {
+					window.open(newwindow , "", "status, menubar=yes,resizable=no, toolbar=no")
+				}
+				else {
+					var blankwindow=window.open("" ,"", "status, menubar=yes,resizable=no, toolbar=no")
+					var windowcontent="<HTML><BODY Style='background-color:#FFFFFF'><H1>New window</H1>" 
+					windowcontent += "<FORM><INPUT Name=close onClick=window.close()"
+					windowcontent += " Type=Button Value=Close /></FORM></BODY></HTML>"
+					blankwindow.document.write(windowcontent)
+				}
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<FORM>
+			<INPUT Name="open" onClick="makeNewWindow()" Type="button" Value="Open URL">
+		</FORM>
+	</BODY>
+</HTML>

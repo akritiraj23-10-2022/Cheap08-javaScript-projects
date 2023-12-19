@@ -1,0 +1,84 @@
+<HTML>
+	<HEAD>
+		<TITLE>McDonalds</TITLE>
+		<SCRIPT Language="JavaScript">
+			var m;
+			function pick(F1) {
+				var z=" ";
+				for(j=0; j<3; j++) {
+					for(i=0; i<F1.elements[j].length; i++) {
+						if (F1.elements[j][i].selected) {
+							var y=F1.elements[j].options[i].value;
+							z=z + "\n" + y;
+							F1.elements[3].value=z;
+						}
+					}
+				}
+				m=z;
+			}
+			function cal(F1) {
+				var d=0;
+				for(j=0; j<3; j++) {
+					for(i=0; i<F1.elements[j].length; i++) {
+						if (F1.elements[j][i].selected) {
+							var y=F1.elements[j].options[i].value;
+							s=new String(y);
+							var a=s.indexOf(">");
+							var b=s.substring(a+1,a+3);
+							c=parseInt(b);
+							d=d+c;
+						}
+					}
+				}
+				p="Total cost of the selected items=" + d;
+				m=m + "\n" + p;
+				F1.elements[3].value=m;
+			}
+			function clr(F1) { 
+				F1.elements[3].value=" ";
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<P Style="text-align:center;">
+			<H2>
+				<SPAN Style="color:blue;">Welcome to the World Famous Fast Food Center </SPAN>
+				<SPAN Style="color:red;"> McDonalds !</SPAN>
+			</H2>
+		</P>
+		<FORM Name="F1">Select the Menu Items of your choice - <BR/><BR/>
+			<TABLE><TR VAlign="Top"><TD>
+				Major dishes :<BR/>
+				<SELECT Name="s1" MULTIPLE onBlur="pick(this.form)">
+					<OPTION Value="Mc Burger->80" SELECTED> Mc Burger</OPTION>
+					<OPTION Value="Fish Fillets->70"> Fish Fillets</OPTION>
+					<OPTION Value="Chicken Burger->60"> Chicken Burger</OPTION>
+					<OPTION Value="Veg. Burger->45"> Veg. Burger</OPTION>
+				</SELECT><BR/><BR/>
+			</TD><TD></TD><TD></TD><TD>
+				Starters :<BR/>
+				<SELECT Name="s2" MULTIPLE onBlur="pick(this.form)">
+					<OPTION Value="French Fries->40"> French Fries</OPTION>
+					<OPTION Value="Nuggets->50">Nuggets</OPTION>
+					<OPTION Value="Hash Browns->55">Hash Browns</OPTION>
+					<OPTION Value="Mc Aloo Tikki->65">Mc Aloo Tikki</OPTION>
+				</SELECT><BR/><BR/>
+			</TD><TD></TD><TD></TD><TD>
+				Miscellaneous :<BR/>
+				<SELECT Name="s3" onBlur="pick(this.form)">
+					<OPTION Value=" ">'Check these out'</OPTION>
+					<OPTION Value="Milkshakes->35">Milkshakes</OPTION>
+					<OPTION Value="Soft drinks->20">Soft drinks</OPTION>
+					<OPTION Value="Softy->25">Softy</OPTION>
+				</SELECT><BR/><BR/>
+			</TD><TD></TD><TD></TD></TR></TABLE><BR/>
+			<TABLE><TR VAlign="Top"><TD>
+				The items selected form the Menu are :
+				<TEXTAREA Name="TA1" Rows="10" Cols="50"></TEXTAREA><BR/><BR/>
+			</TD><TD></TD><TD></TD><TD>
+				<BR/><Input Type="button" Value="Total Cost" onClick="cal(this.form)" />
+				<Input Type="button" Value="Clear" onClick="clr(this.form)" />
+			</TD></TR></TABLE>
+		</FORM>
+	</BODY>
+</HTML>
